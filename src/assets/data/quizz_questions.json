@@ -1,0 +1,373 @@
+{
+  "title": "Para qual país você deveria viajar?",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual clima mais te agrada para uma viagem?",
+      "options": [
+        {
+          "id": 1,
+          "name": "Temperado, com estações bem definidas e talvez neve no inverno.",
+          "alias": "A"
+        },
+        {
+          "id": 2,
+          "name": "Mediterrâneo, com verões quentes e secos e invernos amenos.",
+          "alias": "B"
+        },
+        {
+          "id": 3,
+          "name": "Tropical quente e úmido o ano todo, ideal para praias.",
+          "alias": "C"
+        },
+        {
+          "id": 4,
+          "name": "Variado, com invernos rigorosos e paisagens nevadas, e verões agradáveis.",
+          "alias": "D"
+        },
+        {
+          "id": 5,
+          "name": "Desértico, muito quente e seco durante o dia.",
+          "alias": "E"
+        },
+        {
+          "id": 6,
+          "name": "Sol na maior parte do ano, ideal para praias e atividades ao ar livre, com algumas áreas bem quentes e secas.",
+          "alias": "F"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Qual o principal foco da sua viagem dos sonhos?",
+      "options": [
+        {
+          "id": 1,
+          "name": "Explorar uma cultura rica que mistura tradição e modernidade.",
+          "alias": "A"
+        },
+        {
+          "id": 2,
+          "name": "Mergulhar na história antiga, arte renascentista e gastronomia famosa.",
+          "alias": "B"
+        },
+        {
+          "id": 3,
+          "name": "Relaxar em praias paradisíacas, visitar templos e curtir a vida noturna.",
+          "alias": "C"
+        },
+        {
+          "id": 4,
+          "name": "Aventura em meio à natureza exuberante, montanhas, lagos e vida selvagem.",
+          "alias": "D"
+        },
+        {
+          "id": 5,
+          "name": "Descobrir mistérios de civilizações antigas, pirâmides e tumbas.",
+          "alias": "E"
+        },
+        {
+          "id": 6,
+          "name": "Ver vida selvagem única, mergulhar na Grande Barreira de Coral e explorar paisagens desérticas ou cidades vibrantes.",
+          "alias": "F"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Que tipo de culinária você prefere experimentar?",
+      "options": [
+        {
+          "id": 1,
+          "name": "Sabores delicados e frescos: sushi, ramen, frutos do mar.",
+          "alias": "A"
+        },
+        {
+          "id": 2,
+          "name": "Massas, pizzas, vinhos, azeites e queijos.",
+          "alias": "B"
+        },
+        {
+          "id": 3,
+          "name": "Comida de rua exótica, com equilíbrio de doce, salgado, azedo e picante.",
+          "alias": "C"
+        },
+        {
+          "id": 4,
+          "name": "Pratos robustos, poutine e salmão defumado.",
+          "alias": "D"
+        },
+        {
+          "id": 5,
+          "name": "Culinária do Oriente Médio: Koshari, Ful Medames, carnes grelhadas e pães.",
+          "alias": "E"
+        },
+        {
+          "id": 6,
+          "name": "Churrascos ('barbies'), frutos do mar frescos, culinária moderna com influências diversas e um bom café.",
+          "alias": "F"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Qual paisagem te atrai mais?",
+      "options": [
+        {
+          "id": 1,
+          "name": "Cidades futuristas, montanhas vulcânicas, templos serenos e jardins.",
+          "alias": "A"
+        },
+        {
+          "id": 2,
+          "name": "Colinas com vinhedos, costa rochosa, ruínas e cidades históricas.",
+          "alias": "B"
+        },
+        {
+          "id": 3,
+          "name": "Ilhas tropicais com águas cristalinas, selva densa e mercados flutuantes.",
+          "alias": "C"
+        },
+        {
+          "id": 4,
+          "name": "Montanhas Rochosas, vastas florestas boreais, lagos glaciais e aurora boreal.",
+          "alias": "D"
+        },
+        {
+          "id": 5,
+          "name": "Imenso deserto de areia, oásis verdejantes e recifes de coral.",
+          "alias": "E"
+        },
+        {
+          "id": 6,
+          "name": "Praias mundialmente famosas, o vasto deserto, recifes de coral coloridos e cidades cosmopolitas.",
+          "alias": "F"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Como você prefere se locomover durante a viagem?",
+      "options": [
+        {
+          "id": 1,
+          "name": "Transporte público impecável e pontual, incluindo de alta velocidade.",
+          "alias": "A"
+        },
+        {
+          "id": 2,
+          "name": "Trens confortáveis entre cidades e caminhadas pelos centros históricos.",
+          "alias": "B"
+        },
+        {
+          "id": 3,
+          "name": "Tuk-tuks, barcos, scooters e voos internos de baixo custo.",
+          "alias": "C"
+        },
+        {
+          "id": 4,
+          "name": "Aluguel de carro para explorar a natureza, combinado com transporte público nas cidades.",
+          "alias": "D"
+        },
+        {
+          "id": 5,
+          "name": "Cruzeiro pelo rio, táxis, ônibus ou voos internos para longas distâncias.",
+          "alias": "E"
+        },
+        {
+          "id": 6,
+          "name": "Voos domésticos para cobrir grandes distâncias e aluguel de carro para explorar com liberdade.",
+          "alias": "F"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Qual o seu orçamento aproximado para esta viagem?",
+      "options": [
+        {
+          "id": 1,
+          "name": "Alto. Estou disposto a investir mais por experiências únicas e qualidade.",
+          "alias": "A"
+        },
+        {
+          "id": 2,
+          "name": "Moderado a Alto. Quero um equilíbrio entre conforto, cultura e boa comida.",
+          "alias": "B"
+        },
+        {
+          "id": 3,
+          "name": "Baixo a Moderado. Procuro um destino onde meu dinheiro renda mais.",
+          "alias": "C"
+        },
+        {
+          "id": 4,
+          "name": "Moderado a Alto. Priorizo segurança, natureza e infraestrutura organizada.",
+          "alias": "D"
+        },
+        {
+          "id": 5,
+          "name": "Baixo a Moderado. Busco um bom custo-benefício em atrações históricas.",
+          "alias": "E"
+        },
+        {
+          "id": 6,
+          "name": "Moderado a Alto. É um destino que geralmente exige um investimento maior para aproveitar bem.",
+          "alias": "F"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "Que tipo de atividade noturna você mais curte?",
+      "options": [
+        {
+          "id": 1,
+          "name": "Karaokê, drinks, luzes de neon e restaurantes temáticos.",
+          "alias": "A"
+        },
+        {
+          "id": 2,
+          "name": "Aperitivo ao pôr do sol, passeios noturnos, ópera ou um bom jantar.",
+          "alias": "B"
+        },
+        {
+          "id": 3,
+          "name": "Mercados noturnos vibrantes, bares na praia, shows de luta ou massagem.",
+          "alias": "C"
+        },
+        {
+          "id": 4,
+          "name": "Observar as estrelas longe da cidade, um pub aconchegante ou um evento esportivo.",
+          "alias": "D"
+        },
+        {
+          "id": 5,
+          "name": "Jantar com show em um barco ou espetáculos de som e luz em sítios arqueológicos.",
+          "alias": "E"
+        },
+        {
+          "id": 6,
+          "name": "Um churrasco com amigos, relaxar em um pub ou aproveitar a cena gastronômica da cidade.",
+          "alias": "F"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Qual lembrancinha você mais gostaria de trazer?",
+      "options": [
+        {
+          "id": 1,
+          "name": "Eletrônicos, produtos de anime/mangá, chá matcha ou artesanato delicado.",
+          "alias": "A"
+        },
+        {
+          "id": 2,
+          "name": "Vinho, azeite, queijo, artigos de couro, moda ou uma miniatura do costruções históricas.",
+          "alias": "B"
+        },
+        {
+          "id": 3,
+          "name": "Seda, especiarias, artesanato em madeira, calças 'elephant pants' ou produtos de spa.",
+          "alias": "C"
+        },
+        {
+          "id": 4,
+          "name": "Salmão defumado, ice wine (vinho de gelo), arte indígena ou roupas de frio.",
+          "alias": "D"
+        },
+        {
+          "id": 5,
+          "name": "Papiro, óleos essenciais, estátuas ou um cartucho com seu nome.",
+          "alias": "E"
+        },
+        {
+          "id": 6,
+          "name": "Opala, arte indígena, um chapéu Akubra, produtos de lã ou algo relacionado ao surf.",
+          "alias": "F"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Considerando que você fala português e entende um pouco de inglês e espanhol, como você prefere que seja a comunicação no seu destino?",
+      "options": [
+        {
+          "id": 1,
+          "name": "Aceito o desafio! Mesmo que o inglês seja limitado fora das áreas turísticas e o espanhol não ajude, usarei apps e gestos.",
+          "alias": "A"
+        },
+        {
+          "id": 2,
+          "name": "Prefiro um lugar onde meu espanhol básico ajude a entender a língua local e o inglês seja comum em locais turísticos.",
+          "alias": "B"
+        },
+        {
+          "id": 3,
+          "name": "Conto com meu inglês básico nas áreas turísticas, sabendo que a língua local é bem diferente e o espanhol não ajuda.",
+          "alias": "C"
+        },
+        {
+          "id": 4,
+          "name": "Quero um lugar onde meu inglês básico seja suficiente na maior parte do tempo, mesmo que outra língua (francês) também seja falada.",
+          "alias": "D"
+        },
+        {
+          "id": 5,
+          "name": "Confio que o inglês seja falado por guias e em hotéis nas áreas turísticas, mesmo que a língua local seja predominante e o espanhol não ajude.",
+          "alias": "E"
+        },
+        {
+          "id": 6,
+          "name": "Prefiro um lugar onde o inglês é a língua dominante em todo o país, tornando a comunicação mais simples com meu nível básico.",
+          "alias": "F"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "O que é indispensável na sua mala de viagem?",
+      "options": [
+        {
+          "id": 1,
+          "name": "Adaptador universal, bateria extra e um bom aplicativo de tradução.",
+          "alias": "A"
+        },
+        {
+          "id": 2,
+          "name": "Sapatos confortáveis para caminhar, um guia de arte/história e espaço extra para vinhos.",
+          "alias": "B"
+        },
+        {
+          "id": 3,
+          "name": "Roupas leves, protetor solar forte, repelente e espírito aventureiro.",
+          "alias": "C"
+        },
+        {
+          "id": 4,
+          "name": "Roupas para frio e calor (camadas), botas de caminhada e câmera fotográfica.",
+          "alias": "D"
+        },
+        {
+          "id": 5,
+          "name": "Chapéu, óculos de sol, lenços para cobrir ombros/cabeça e muita água.",
+          "alias": "E"
+        },
+        {
+          "id": 6,
+          "name": "Protetor solar potente, chapéu, óculos de sol, roupa de banho e repelente.",
+          "alias": "F"
+        }
+      ]
+    }
+  ],
+  "results": {
+    "A": "Você deveria viajar para o Japão!",
+    "B": "Você deveria viajar para a Itália!",
+    "C": "Você deveria viajar para a Tailândia!",
+    "D": "Você deveria viajar para o Canadá!",
+    "E": "Você deveria viajar para o Egito!",
+    "F": "Você deveria viajar para a Austrália!"
+  }
+}
