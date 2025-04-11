@@ -3,16 +3,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
 import localQuizz from '../../assets/data/quizz_questions.json';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class QuizzService {
-  private apiUrl = 'https://api.jsonbin.io/v3/b/67f898a38960c979a582cbbd';
-  
-  // IMPORTANTE: Substitua '$YOUR_ACCESS_KEY' pelo seu token real de acesso ao JSONBin
+  private apiUrl = environment.apiUrl;
   private authHeader: string = 'X-Access-Key';
-  private authToken: string = '$2a$10$vgCdwcQFiMBCYKAU.MjSIuJCJgovINPU.cbtKW/IXJ0i3pMzn7ALG';
+  private authToken: string = environment.apiKey;
 
   constructor(private http: HttpClient) { }
 

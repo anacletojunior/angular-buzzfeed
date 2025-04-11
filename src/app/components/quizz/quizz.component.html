@@ -32,6 +32,10 @@
       <h1>{{answerSelected}}</h1>
     </div>
     
-    <app-footer></app-footer>
+    <app-footer 
+      [currentQuestion]="questionIndex + 1" 
+      [totalQuestions]="questionMaxIndex"
+      [showCounter]="!finished">
+    </app-footer>
   </div>
 </div>

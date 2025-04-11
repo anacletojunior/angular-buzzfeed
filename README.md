@@ -1,27 +1,64 @@
-# ProjetoBuzzfeed
+# Quiz BuzzFeed - Para Qual País Você Deveria Viajar?
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+Um quiz no estilo BuzzFeed que sugere algo sobre você de acordo com suas respostas. Desenvolvido com Angular.
 
-## Development server
+## Funcionalidades
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Interface responsiva para celulares, tablets e desktop
+- Questões com opções aleatórias em cada tentativa
+- Contador de progresso das perguntas
+- Suporte a atualização remota de perguntas através de API
+- Fallback para dados locais caso a API esteja indisponível
 
-## Code scaffolding
+## Configuração do Ambiente
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para rodar o projeto, você precisará configurar as variáveis de ambiente:
 
-## Build
+1. Copie o arquivo `src/environments/environment.example.ts` para `src/environments/environment.ts`
+2. Adicione suas credenciais de API:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```typescript
+export const environment = {
+  production: false,
+  apiUrl: 'https://api.jsonbin.io/v3/b/YOUR_BIN_ID',
+  apiKey: 'YOUR_ACCESS_KEY'
+};
+```
 
-## Running unit tests
+> **IMPORTANTE**: Nunca comite o arquivo `environment.ts` com suas credenciais reais!
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Configuração para a Vercel
 
-## Running end-to-end tests
+Para implantar na Vercel com segurança:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. No dashboard da Vercel, vá para as configurações do seu projeto
+2. Na seção "Environment Variables", adicione:
+   - `ANGULAR_APP_API_URL`: seu endpoint da API
+   - `ANGULAR_APP_API_KEY`: sua chave de API
 
-## Further help
+## Instalação e Execução
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+# Instalar dependências
+npm install
+
+# Executar localmente
+ng serve
+
+# Construir para produção
+ng build
+```
+
+## Contribuição
+
+Contribuições são bem-vindas! Por favor, siga estas etapas:
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
+3. Faça commit das alterações (`git commit -m 'Adiciona nova feature'`)
+4. Envie para a branch (`git push origin feature/nova-feature`)
+5. Abra um Pull Request
+
+## Autor
+
+- [@anacletojunior](https://github.com/anacletojunior)
