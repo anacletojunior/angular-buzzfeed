@@ -1,20 +1,33 @@
 .quizz_footer{
     display: flex;
-    width: 100%;
-    justify-content: center;    
-    position: absolute;
-    bottom: 25px;
-    left: 0;  
-    font-family: Arial;  
+    width: 80%;
+    align-items: center;
+    position: fixed;
+    bottom: 0px;       
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-family: Arial;
+    padding: 8px;
+    background-color: #150c1f;
 }
 
-.quizz_footer > p {  
+.quizz_footer > p {
+  position: absolute;
+  right: 0;
   font-size: 15px;  
-  margin: 0;
 }
 
 .quizz_footer > p > a {
   text-decoration: none;  
+  color: inherit;
+}
+
+.question-counter {
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #5cbf2a;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
 }
 
 .hover-underline {
@@ -37,11 +50,44 @@
 }
 
 .hover-underline::before {
-  top: -1px;
+  top: -3px;
   transform-origin: left;
 }
 
 .hover-underline:hover::after,
 .hover-underline:hover::before {
   transform: scaleX(1);
+}
+
+/* Media Queries para Responsividade do Footer */
+@media screen and (max-width: 768px) {
+  .quizz_footer {
+    width: 95%;
+
+  }
+
+  .quizz_footer > p {
+    font-size: 14px;
+  }
+  
+  .question-counter {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .quizz_footer {
+    width: 98%;
+    padding: 10px;
+  }
+
+  .quizz_footer > p {
+    font-size: 12px;
+  }
+  
+  .question-counter {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
 }
