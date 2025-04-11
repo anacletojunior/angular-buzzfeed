@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import quizz_questions from "../../../assets/data/quizz_questions.json"
+import { QuizzService } from '../../services/quizz.service';
 
 @Component({
   selector: 'app-quizz',
@@ -17,12 +17,18 @@ export class QuizzComponent implements OnInit {
   answers:string[] = []
   answerSelected:string =""
 
-  questionIndex:number =0
-  questionMaxIndex:number=0
+  questionIndex:number = 0
+  questionMaxIndex:number = 0
 
   finished:boolean = false
+  
+  // Armazenar os dados do quizz
+  quizzData: any;
+  
+  // Indicador de carregamento
+  isLoading: boolean = true;
 
-  constructor() { }
+  constructor(private quizzService: QuizzService) { }
 
   // Função para embaralhar array
   shuffleArray(array: any[]) {
@@ -34,41 +40,58 @@ export class QuizzComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if(quizz_questions){
-      this.finished = false
-      this.title = quizz_questions.title
+    this.loadQuizzData();
+  }
 
-      this.questions = quizz_questions.questions
-      this.questionSelected = this.questions[this.questionIndex]
+  loadQuizzData(): void {
+    this.isLoading = true;
+    this.quizzService.getQuizzData().subscribe(
+      data => {
+        this.quizzData = data;
+        this.initializeQuizz();
+        this.isLoading = false;
+      },
+      error => {
+        console.error('Erro ao carregar dados do quiz:', error);
+        this.isLoading = false;
+      }
+    );
+  }
+
+  initializeQuizz(): void {
+    if(this.quizzData){
+      this.finished = false;
+      this.title = this.quizzData.title;
+
+      this.questions = this.quizzData.questions;
+      this.questionSelected = this.questions[this.questionIndex];
       // Embaralha as opções da primeira questão
-      this.questionSelected.options = this.shuffleArray([...this.questionSelected.options])
-      console.log(this.questionSelected.options)
+      this.questionSelected.options = this.shuffleArray([...this.questionSelected.options]);
 
-      this.questionIndex = 0
-      this.questionMaxIndex = this.questions.length
+      this.questionIndex = 0;
+      this.questionMaxIndex = this.questions.length;
 
-      console.log(this.questionIndex)
-      console.log(this.questionMaxIndex)
+      console.log(this.questionIndex);
+      console.log(this.questionMaxIndex);
     }
   }
 
   playerChoose(value:string){
-    this.answers.push(value)
-    this.nextStep()
+    this.answers.push(value);
+    this.nextStep();
   }
 
   async nextStep(){
-    this.questionIndex+=1
+    this.questionIndex+=1;
 
     if(this.questionMaxIndex > this.questionIndex){
-        this.questionSelected = this.questions[this.questionIndex]
+        this.questionSelected = this.questions[this.questionIndex];
         // Embaralha as opções da próxima questão
-        this.questionSelected.options = this.shuffleArray([...this.questionSelected.options])
-        console.log(this.questionSelected.options)
+        this.questionSelected.options = this.shuffleArray([...this.questionSelected.options]);
     }else{
-      const finalAnswer:string = await this.checkResult(this.answers)
-      this.finished = true
-      this.answerSelected = quizz_questions.results[finalAnswer as keyof typeof quizz_questions.results ]
+      const finalAnswer:string = await this.checkResult(this.answers);
+      this.finished = true;
+      this.answerSelected = this.quizzData.results[finalAnswer as keyof typeof this.quizzData.results];
     }
   }
 
@@ -78,12 +101,12 @@ export class QuizzComponent implements OnInit {
           arr.filter(item => item === previous).length >
           arr.filter(item => item === current).length
         ){
-          return previous
+          return previous;
         }else{
-          return current
+          return current;
         }
-    })
+    });
 
-    return result
+    return result;
   }
 }
