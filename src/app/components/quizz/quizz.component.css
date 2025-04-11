@@ -1,7 +1,11 @@
 .quizz__container{
+  display: flex;
+  flex-direction: column; 
+  margin: auto; 
   width: 80%;
-  margin: auto;
+  min-height: 100vh;
   margin-top: 20px;
+  position: relative;
 }
 
 .quizz_logo{
@@ -15,7 +19,6 @@
 .quizz_logo > h3{
   margin-top: 20px;
   font-size: 25px;
-  font-family: 'Segoe UI';
 }
 
 .quizz_questions{
@@ -25,17 +28,14 @@
   border:1px solid #4224d9;
   padding: 20px;
   border-radius: 30px;
-  background-color: #644ED2;
-  
+  background-color: #644ED2;  
   width: 100%;
-  height: 150px; 
-  font-family: 'Segoe UI';
-  font-size: 30px;
-  font-family: 'Segoe UI'; 
+  height: 160px; 
+  font-size: 24px;
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 30px;
 }
-
-
 
 .quizz_options{
   display: flex;
@@ -48,17 +48,14 @@
   border-radius: 20px;
   border: 1px solid #18ab29;
   width: 49%;
-  height: 80px;
+  height: 13vh;
   display: inline-block;
   cursor: pointer;
-  color: #ffffff;
-  font-family: Arial;
+  color: #ffffff;  
   font-size: 17px;
-  padding: 16px 31px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #2f6627;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  font-weight: bold;
+  padding: 5px;  
+  margin-bottom: 30px;
 }
 
 .btn-option:hover{
@@ -83,4 +80,77 @@
   font-family: 'Segoe UI';
   font-weight: bold;
   font-size: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .quizz__container {
+    width: 95%;
+    margin-top: 10px;
+  }
+
+  .quizz_logo > h3 {
+    font-size: 20px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .quizz_questions {
+    height: 12vh;
+    min-height: 120px;
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .btn-option {
+    width: 100%;
+    height: auto;
+    min-height: 60px;
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  .quizz_results {
+    height: auto;
+    min-height: 250px;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .quizz_results h1 {
+    font-size: 24px;
+    text-align: center;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .quizz__container {
+    width: 98%;
+    margin-top: 5px;
+  }
+
+  .quizz_logo > img {
+    width: 98%;
+  }
+
+  .quizz_logo > h3 {
+    font-size: 16px;
+  }
+
+  .quizz_questions {
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  .btn-option {
+    font-size: 14px;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+
+  .quizz_results h1 {
+    font-size: 24px;
+  }
 }
