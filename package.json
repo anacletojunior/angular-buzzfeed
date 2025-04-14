@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "vercel-build": "mkdir -p src/environments && echo 'export const environment = { production: false, apiUrl: process.env[\"ANGULAR_APP_API_URL\"] || \"https://api.jsonbin.io/v3/b/67f898a38960c979a582cbbd\", apiKey: process.env[\"ANGULAR_APP_API_KEY\"] || \"$2a$10$vgCdwcQFiMBCYKAU.MjSIuJCJgovINPU.cbtKW/IXJ0i3pMzn7ALG\" };' > src/environments/environment.ts && echo 'export const environment = { production: true, apiUrl: process.env[\"ANGULAR_APP_API_URL\"] || \"https://api.jsonbin.io/v3/b/67f898a38960c979a582cbbd\", apiKey: process.env[\"ANGULAR_APP_API_KEY\"] || \"$2a$10$vgCdwcQFiMBCYKAU.MjSIuJCJgovINPU.cbtKW/IXJ0i3pMzn7ALG\" };' > src/environments/environment.prod.ts && ng build",
+    "vercel-build": "mkdir -p src/environments && echo 'declare const process: { env: { [key: string]: string | undefined; } }; export const environment = { production: false, apiUrl: process.env[\"ANGULAR_APP_API_URL\"] || \"https://api.jsonbin.io/v3/b/67f898a38960c979a582cbbd\", apiKey: process.env[\"ANGULAR_APP_API_KEY\"] || \"$2a$10$vgCdwcQFiMBCYKAU.MjSIuJCJgovINPU.cbtKW/IXJ0i3pMzn7ALG\" };' > src/environments/environment.ts && echo 'declare const process: { env: { [key: string]: string | undefined; } }; export const environment = { production: true, apiUrl: process.env[\"ANGULAR_APP_API_URL\"] || \"https://api.jsonbin.io/v3/b/67f898a38960c979a582cbbd\", apiKey: process.env[\"ANGULAR_APP_API_KEY\"] || \"$2a$10$vgCdwcQFiMBCYKAU.MjSIuJCJgovINPU.cbtKW/IXJ0i3pMzn7ALG\" };' > src/environments/environment.prod.ts && ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -28,6 +28,7 @@
     "@angular/cli": "~14.1.2",
     "@angular/compiler-cli": "^14.1.0",
     "@types/jasmine": "~4.0.0",
+    "@types/node": "^22.14.1",
     "jasmine-core": "~4.2.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
