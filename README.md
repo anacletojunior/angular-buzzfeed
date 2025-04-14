@@ -1,6 +1,6 @@
 # Quiz BuzzFeed - Para Qual País Você Deveria Viajar?
 
-Um quiz no estilo BuzzFeed que sugere um país para você visitar com base nas suas respostas. Desenvolvido com Angular.
+Um quiz no estilo BuzzFeed que sugere algo sobre você de acordo com suas respostas. Desenvolvido com Angular.
 
 ## Funcionalidades
 
