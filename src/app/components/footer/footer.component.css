@@ -1,13 +1,13 @@
 .quizz_footer{
     display: flex;
-    width: 80%;
+    width: 100%;
     align-items: center;
-    position: fixed;
-    bottom: 0px;       
+    position: absolute;
+    bottom: 0;
+    left: 0;    
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     font-family: Arial;
     padding: 8px;
-    background-color: #150c1f;
 }
 
 .quizz_footer > p {
@@ -62,8 +62,9 @@
 /* Media Queries para Responsividade do Footer */
 @media screen and (max-width: 768px) {
   .quizz_footer {
-    width: 95%;
-
+    padding: 15px;
+    position: relative;
+    margin-top: 20px;
   }
 
   .quizz_footer > p {
@@ -78,7 +79,6 @@
 
 @media screen and (max-width: 480px) {
   .quizz_footer {
-    width: 98%;
     padding: 10px;
   }
 
