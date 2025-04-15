@@ -42,4 +42,6 @@ testem.log
 Thumbs.db
 
 # Environment files with sensitive data
+environment.ts
+environment.prod.ts
 
