@@ -61,7 +61,7 @@
   transform: scaleX(1);
 }
 
-/* Media Queries para Responsividade do Footer */
+
 @media screen and (max-width: 768px) {
   .quizz_footer {
     width: 95%;

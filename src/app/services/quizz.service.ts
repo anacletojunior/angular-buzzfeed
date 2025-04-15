@@ -16,21 +16,20 @@ export class QuizzService {
   constructor(private http: HttpClient) { }
 
   getQuizzData(): Observable<any> {
-    // Cria o objeto HttpHeaders com a chave e valor de autenticação
+    
     const headers = new HttpHeaders({
       [this.authHeader]: this.authToken
     });
 
-    // Repassa os headers na chamada do método get
-    // e extrai o campo 'record' que contém os dados reais
+    
     return this.http.get<any>(this.apiUrl, { headers }).pipe(
       map(response => {
-        // JSONBin retorna os dados no campo 'record'
-        return response.record || response;
+        
+        return response.record;
       }),
       catchError(error => {
         console.log('Erro ao buscar dados do endpoint, usando dados locais:', error);
-        // Em caso de erro, retorna os dados locais
+        
         return of(localQuizz);
       })
     );

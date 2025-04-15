@@ -22,15 +22,15 @@ export class QuizzComponent implements OnInit {
 
   finished:boolean = false
   
-  // Armazenar os dados do quizz
+  
   quizzData: any;
   
-  // Indicador de carregamento
+
   isLoading: boolean = true;
 
   constructor(private quizzService: QuizzService) { }
 
-  // Função para embaralhar array
+ 
   shuffleArray(array: any[]) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -65,7 +65,7 @@ export class QuizzComponent implements OnInit {
 
       this.questions = this.quizzData.questions;
       this.questionSelected = this.questions[this.questionIndex];
-      // Embaralha as opções da primeira questão
+      
       this.questionSelected.options = this.shuffleArray([...this.questionSelected.options]);
 
       this.questionIndex = 0;
@@ -86,7 +86,7 @@ export class QuizzComponent implements OnInit {
 
     if(this.questionMaxIndex > this.questionIndex){
         this.questionSelected = this.questions[this.questionIndex];
-        // Embaralha as opções da próxima questão
+        
         this.questionSelected.options = this.shuffleArray([...this.questionSelected.options]);
     }else{
       const finalAnswer:string = await this.checkResult(this.answers);

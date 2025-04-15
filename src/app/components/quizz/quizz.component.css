@@ -6,7 +6,7 @@
   min-height: 100vh;
   margin-top: 20px;
   position: relative;
-  padding-bottom: 60px; /* Espaço para o footer */
+  padding-bottom: 60px;
 }
 
 .quizz_logo{
@@ -84,7 +84,7 @@
   font-size: 20px;
 }
 
-/* Estilos para o indicador de carregamento */
+
 .loading-container {
   display: flex;
   flex-direction: column;
