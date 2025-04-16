@@ -10,8 +10,8 @@ import { environment } from '../../environments/environment';
 })
 export class QuizzService {
   private apiUrl = environment.apiUrl;
-  private authHeader: string = 'X-Access-Key';
-  private authToken: string = environment.apiKey;
+  private authHeader: string = "";
+  private authToken: string = "";
 
   constructor(private http: HttpClient) { }
 
