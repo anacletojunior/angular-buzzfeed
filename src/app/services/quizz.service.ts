@@ -23,7 +23,7 @@ export class QuizzService {
 
     // Repassa os headers na chamada do método get
     // e extrai o campo 'record' que contém os dados reais
-    return this.http.get<any>(this.apiUrl, { headers }).pipe(
+    return this.http.get<any>(this.apiUrl).pipe(
       map(response => {
         // JSONBin retorna os dados no campo 'record'
         return response.record || response;
