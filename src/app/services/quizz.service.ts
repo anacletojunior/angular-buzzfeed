@@ -10,8 +10,8 @@ import { environment } from '../../environments/environment';
 })
 export class QuizzService {
   private apiUrl = environment.apiUrl;
-  private authHeader: string = "";
-  private authToken: string = "";
+  private authHeader: string = "Content-Type";
+  private authToken: string = "application/json";
 
   constructor(private http: HttpClient) { }
 
@@ -23,7 +23,7 @@ export class QuizzService {
 
     // Repassa os headers na chamada do método get
     // e extrai o campo 'record' que contém os dados reais
-    return this.http.get<any>(this.apiUrl).pipe(
+    return this.http.get<any>(this.apiUrl, { headers }).pipe(
       map(response => {
         // JSONBin retorna os dados no campo 'record'
         return response.record || response;
